@@ -9,11 +9,11 @@ Open up a terminal and execute:
 
 ```term
 $ npm install
+$ webpack
 $ npm start
 ```
 
 Then open up your browser and navigate to [http://localhost:3000/](http://localhost:3000/).
 
-# License
 
-Apache 2.0
+
