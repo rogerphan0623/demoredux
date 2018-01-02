@@ -9,7 +9,6 @@ Open up a terminal and execute:
 
 ```term
 $ npm install
-$ webpack
 $ npm start
 ```
 
