@@ -1,21 +1,20 @@
-var open = require('open');
 var path = require('path');
-var morgan = require('morgan');
+// var morgan = require('morgan');
 var express = require('express');
-var webpack = require('webpack');
-var webpackDevMiddleware = require('webpack-dev-middleware');
+//var webpack = require('webpack');
+// var webpackDevMiddleware = require('webpack-dev-middleware');
 
-var config = require('./webpack.config');
-var compiler = webpack(config);
+// var config = require('./webpack.config');
+// var compiler = webpack(config);
 
 var app = express();
 
-app.use(morgan('dev'));
-
-app.use(webpackDevMiddleware(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
+// app.use(morgan('dev'));
+//
+// app.use(webpackDevMiddleware(compiler, {
+//   noInfo: true,
+//   publicPath: config.output.publicPath
+// }));
 
 app.use(express.static('./dist/'));
 

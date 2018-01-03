@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+const objectAssign = require('object-assign');
 
 var defaultState = {
   todo: {
@@ -40,7 +41,7 @@ function todoApp(state, action) {
   switch (action.type) {
     case 'ADD_TODO':
       var items = [].concat(state.todo.items);
-      return Object.assign({}, state, {
+      return objectAssign({}, state, {
         todo: {
           items: items.concat([{
             message: action.message,
@@ -54,7 +55,7 @@ function todoApp(state, action) {
 
       items[action.index].completed = true;
 
-      return Object.assign({}, state, {
+      return objectAssign({}, state, {
         todo: {
           items: items
         }
@@ -65,14 +66,14 @@ function todoApp(state, action) {
 
       items.splice(action.index, 1);
 
-      return Object.assign({}, state, {
+      return objectAssign({}, state, {
         todo: {
           items: items
         }
       });
 
     case 'CLEAR_TODO':
-      return Object.assign({}, state, {
+      return objectAssign({}, state, {
         todo: {
           items: []
         }
